@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MealFlow | Smart Meal Planning</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <header class="navbar glass">
+    <div class="logo">🥗 MealFlow</div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#ai-demo">AI Planner</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="icon-btn"><i class="fas fa-moon"></i></button>
+      <button class="btn btn-primary" onclick="openModal()">Login</button>
+    </div>
+  </header>
+
+  <section id="hero" class="hero reveal">
+    <div class="hero-content">
+      <h1>Smart Meal Planning <br><span>Made Easy</span></h1>
+      <p>Organize your daily food plans, track nutrition, and discover new recipes with our intelligent meal management platform.</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary">Get Started</button>
+        <button class="btn btn-outline">Try Demo</button>
+      </div>
+      <div class="stats">
+        <div><h3 class="counter" data-target="1000">0</h3><p>Active Users</p></div>
+        <div><h3 class="counter" data-target="50000">0</h3><p>Meals Planned</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section reveal">
+    <h2 class="section-title">Everything you need to eat better</h2>
+    <div class="grid features-grid">
+      <div class="card glass">
+        <i class="fas fa-calendar-alt fa-2x feature-icon"></i>
+        <h3>Meal Calendar</h3>
+        <p>Plan your meals for the week with a simple drag-and-drop interface.</p>
+      </div>
+      <div class="card glass">
+        <i class="fas fa-leaf fa-2x feature-icon"></i>
+        <h3>Nutrition Tracking</h3>
+        <p>Automatically calculate macros and calories for every meal.</p>
+      </div>
+      <div class="card glass">
+        <i class="fas fa-chart-pie fa-2x feature-icon"></i>
+        <h3>Analytics Dashboard</h3>
+        <p>Visualize your eating habits and track your progress over time.</p>
+      </div>
+      <div class="card glass">
+        <i class="fas fa-users fa-2x feature-icon"></i>
+        <h3>Family Management</h3>
+        <p>Coordinate meals, groceries, and allergies for the whole household.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dashboard" class="section reveal">
+    <h2 class="section-title">Your Nutrition Hub</h2>
+    <div class="dashboard-preview glass">
+      
+      <div class="dash-header">
+        <h3>Today's Overview</h3>
+        <span class="date">Wednesday, Oct 25</span>
+      </div>
+
+      <div class="dash-stats-grid">
+        
+        <div class="stat-card glass">
+          <h4>Daily Macros</h4>
+          <div class="macro-donut">
+            <div class="donut-hole">
+              <span class="kcal-text">1450</span>
+              <small>kcal</small>
+            </div>
+          </div>
+          <div class="macro-labels">
+            <span class="label-p"><i class="fas fa-circle"></i> Pro 30%</span>
+            <span class="label-c"><i class="fas fa-circle"></i> Crb 45%</span>
+            <span class="label-f"><i class="fas fa-circle"></i> Fat 25%</span>
+          </div>
+        </div>
+
+        <div class="stat-card glass">
+          <h4>This Week</h4>
+          <div class="bar-chart">
+            <div class="bar-wrap"><div class="bar" data-height="60%"></div><span>M</span></div>
+            <div class="bar-wrap"><div class="bar" data-height="80%"></div><span>T</span></div>
+            <div class="bar-wrap"><div class="bar active" data-height="72%"></div><span>W</span></div>
+            <div class="bar-wrap"><div class="bar" data-height="90%"></div><span>T</span></div>
+            <div class="bar-wrap"><div class="bar" data-height="50%"></div><span>F</span></div>
+            <div class="bar-wrap"><div class="bar" data-height="85%"></div><span>S</span></div>
+            <div class="bar-wrap"><div class="bar" data-height="40%"></div><span>S</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <h4 class="sub-heading">Today's Plan</h4>
+      <div class="dash-meals">
+        <div class="meal-item glass">
+          <img src="https://images.unsplash.com/photo-1517673400267-0251440c45dc?auto=format&fit=crop&w=150&q=80" alt="Oatmeal" class="meal-img">
+          <div class="meal-info">
+            <span class="meal-title">Oatmeal & Berries</span>
+            <span class="meal-cal">320 kcal • 12g Protein</span>
+          </div>
+          <span class="meal-tag">Breakfast</span>
+        </div>
+        
+        <div class="meal-item glass">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=150&q=80" alt="Salad" class="meal-img">
+          <div class="meal-info">
+            <span class="meal-title">Grilled Chicken Salad</span>
+            <span class="meal-cal">450 kcal • 40g Protein</span>
+          </div>
+          <span class="meal-tag">Lunch</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="ai-demo" class="section reveal">
+    <h2 class="section-title">Ask our AI Chef ✨</h2>
+    <div class="ai-container glass">
+      <div class="input-group">
+        <input type="text" id="ai-input" placeholder="e.g., I want a high protein, low carb dinner...">
+        <button id="ai-btn" class="btn btn-primary"><i class="fas fa-magic"></i> Generate</button>
+      </div>
+      <div id="ai-output" class="ai-output hidden">
+        </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section reveal">
+    <h2 class="section-title">Simple, transparent pricing</h2>
+    <div class="grid pricing-grid">
+      <div class="card glass">
+        <h3>Free</h3>
+        <p class="price">$0<span>/mo</span></p>
+        <ul>
+          <li><i class="fas fa-check"></i> Basic Meal Planning</li>
+          <li><i class="fas fa-check"></i> 50 Recipes</li>
+        </ul>
+        <button class="btn btn-outline w-100">Get Started</button>
+      </div>
+      <div class="card glass premium-card">
+        <div class="badge">Most Popular</div>
+        <h3>Pro</h3>
+        <p class="price">$9<span>/mo</span></p>
+        <ul>
+          <li><i class="fas fa-check"></i> Advanced Nutrition Tracking</li>
+          <li><i class="fas fa-check"></i> Unlimited Recipes</li>
+          <li><i class="fas fa-check"></i> AI Suggestions</li>
+        </ul>
+        <button class="btn btn-primary w-100">Try Pro Free</button>
+      </div>
+      <div class="card glass">
+        <h3>Family</h3>
+        <p class="price">$19<span>/mo</span></p>
+        <ul>
+          <li><i class="fas fa-check"></i> Everything in Pro</li>
+          <li><i class="fas fa-check"></i> 5 Sub-accounts</li>
+          <li><i class="fas fa-check"></i> Shared Grocery Lists</li>
+        </ul>
+        <button class="btn btn-outline w-100">Get Family</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section reveal">
+    <h2 class="section-title">Loved by Foodies</h2>
+    <div class="carousel-container glass">
+      <div class="carousel-slide active">
+        <p>"MealFlow completely changed how I prep for the week. I save so much time and eat healthier!"</p>
+        <h4>- Sarah J.</h4>
+      </div>
+      <div class="carousel-slide">
+        <p>"The AI suggestions are magic. It perfectly tailors meals to my keto diet."</p>
+        <h4>- Mark T.</h4>
+      </div>
+      <div class="carousel-slide">
+        <p>"Finally, an app that lets me manage my family's crazy schedules and picky eaters in one place."</p>
+        <h4>- Emily R.</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer glass">
+    <div class="footer-content grid">
+      <div class="brand">
+        <h3>MealFlow</h3>
+        <p>Eat smarter, live better.</p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="newsletter">
+        <h4>Stay Updated</h4>
+        <form id="newsletter-form">
+          <input type="email" id="email-input" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p id="form-msg" class="form-msg"></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MealFlow SaaS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="fab" title="Add New Meal"><i class="fas fa-plus"></i></button>
+
+  <div id="login-modal" class="modal">
+    <div class="modal-content glass">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Welcome Back</h2>
+      <input type="email" placeholder="Email" class="w-100 modal-input">
+      <input type="password" placeholder="Password" class="w-100 modal-input">
+      <button class="btn btn-primary w-100">Sign In</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
