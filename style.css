@@ -288,6 +288,7 @@ ul { list-style: none; }
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 12px;
 }
 .meal-info {
   flex: 1;
