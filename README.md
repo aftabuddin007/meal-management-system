@@ -10,16 +10,7 @@ A comprehensive, full-stack meal management system designed to streamline meal p
 * **🛒 Automated Grocery Lists:** Automatically generate shopping lists based on your weekly meal plans and current inventory.
 * **📊 Dashboard & Analytics:** Track nutritional intake and monitor weekly food expenses.
 * **🔐 User Authentication:** Secure login, registration, and profile management.
-* **📱 Responsive Design:** Fully functional and visually appealing across desktop, tablet, and mobile devices.
-
-## 🛠️ Tech Stack
-
-* **Frontend:** Next.js / React.js, Tailwind CSS
-* **Backend:** Node.js, Express.js
-* **Database:** MongoDB, Mongoose
-* **Authentication:** JWT (JSON Web Tokens)
-
-## 🚀 Getting Started
+* **📱 Responsive Design:** Fully functional and visually appealing across desktop and mobile
 
 ### Prerequisites
 
