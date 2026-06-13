@@ -16,49 +16,8 @@ A comprehensive, full-stack meal management system designed to streamline meal p
 
 Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine.
 
-### Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/yourusername/meal-management-system.git
-    cd meal-management-system
-    ```
 
-2.  **Install Frontend Dependencies:**
-    ```bash
-    cd client
-    npm install
-    ```
-
-3.  **Install Backend Dependencies:**
-    ```bash
-    cd ../server
-    npm install
-    ```
-
-4.  **Environment Variables:**
-    Create a `.env` file in the `server` directory and add the following:
-    ```env
-    PORT=5000
-    MONGO_URI=your_mongodb_connection_string
-    JWT_SECRET=your_secret_key
-    ```
-    Create a `.env.local` file in the `client` directory:
-    ```env
-    NEXT_PUBLIC_API_URL=http://localhost:5000/api
-    ```
-
-5.  **Run the Application:**
-    * Start the backend server:
-        ```bash
-        cd server
-        npm run dev
-        ```
-    * Start the frontend development server:
-        ```bash
-        cd client
-        npm run dev
-        ```
 
 ## 🤝 Contributing
 
